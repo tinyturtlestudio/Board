@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    tools:context=".SignInActivity">
+
+    <Button
+        android:id="@+id/btSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="27dp"
+        android:background="@drawable/btn_rounded"
+        android:fontFamily="@font/roboto"
+        android:text="Sign In"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/tvLinkSignUp"
+        app:layout_constraintEnd_toEndOf="@+id/etPassword"
+        app:layout_constraintStart_toStartOf="@+id/etPassword" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="23dp"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:hint="Email"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/btViewPasswordIn"
+        app:layout_constraintEnd_toStartOf="@+id/btViewPasswordIn"
+        app:layout_constraintStart_toStartOf="@+id/etPassword" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintEnd_toStartOf="@+id/btViewPasswordIn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btViewPasswordIn" />
+
+
+    <ImageButton
+        android:id="@+id/btViewPasswordIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="257dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etPassword"
+        app:srcCompat="@android:drawable/ic_menu_view" />
+
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="58dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/tvLinkSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:layout_marginBottom="113dp"
+        android:clickable="true"
+        android:fontFamily="@font/roboto"
+        android:text="Don't have an account? Sign Up"
+        android:textColor="@color/header_theme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+
+    <TextView
+        android:id="@+id/tvSignIn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:fontFamily="@font/roboto"
+        android:text="Board"
+        android:textColor="#FFFFFF"
+        android:textSize="45dp"
+        app:layout_constraintStart_toStartOf="@+id/logoImage"
+        app:layout_constraintTop_toBottomOf="@+id/logoImage" />
+
+    <TextView
+        android:id="@+id/tvSignIn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="3dp"
+        android:fontFamily="@font/roboto"
+        android:text="Welcome!"
+        android:textColor="#FFFFFF"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvSignIn2"
+        app:layout_constraintTop_toBottomOf="@+id/tvSignIn2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

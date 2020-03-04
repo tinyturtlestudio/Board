@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    tools:context=".SignUpActivity">
+
+
+    <Button
+        android:id="@+id/btSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="51dp"
+        android:background="@drawable/btn_rounded"
+        android:fontFamily="@font/roboto"
+        android:text="Sign In"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/tvLoginLink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPasswordReq" />
+
+
+    <EditText
+        android:id="@+id/etSignFirstName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="9dp"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:hint="First Name"
+        android:inputType="textEmailAddress"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/etSignLastName"
+        app:layout_constraintEnd_toStartOf="@+id/etSignLastName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etSignLastName" />
+
+    <EditText
+        android:id="@+id/etSignLastName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="3dp"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:hint="Last Name"
+        android:inputType="textEmailAddress"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/etEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etSignFirstName"
+        app:layout_constraintTop_toBottomOf="@+id/tvSignUp2" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="17dp"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/etPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSignLastName" />
+
+    <!--        app:layout_constraintEnd_toStartOf="@+id/btViewPassword"-->
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+
+    <EditText
+        android:id="@+id/etPasswordRe"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="27dp"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:hint="Retype Password"
+        android:inputType="textPassword"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/tvPasswordReq"
+        app:layout_constraintEnd_toStartOf="@+id/btViewPasswordRe"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="18dp"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/etPasswordRe"
+        app:layout_constraintEnd_toStartOf="@+id/btViewPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/btViewPasswordRe"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginEnd="12dp"-->
+    <!--        android:background="@null"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/etPasswordRe"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:srcCompat="@android:drawable/ic_menu_view" />-->
+
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/btViewPassword"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="288dp"-->
+    <!--        android:layout_marginEnd="12dp"-->
+    <!--        android:layout_marginBottom="30dp"-->
+    <!--        android:background="@null"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/btViewPasswordRe"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/etPassword"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:srcCompat="@android:drawable/ic_menu_view" />-->
+
+    <TextView
+        android:id="@+id/tvLoginLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="59dp"
+        android:fontFamily="@font/roboto"
+        android:text="Have an account? Login here"
+        android:textColor="#0097A7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btSignIn" />
+
+    <TextView
+        android:id="@+id/tvSignUp2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="29dp"
+        android:fontFamily="@font/roboto"
+        android:text="Sign Up"
+        android:textColor="#FFFFFF"
+        android:textSize="45dp"
+        app:layout_constraintBottom_toTopOf="@+id/etSignLastName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPasswordReq"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="28dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/password_req"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/btSignIn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPasswordRe" />
+
+    <ImageButton
+        android:id="@+id/btViewPassword"
+        android:layout_width="43dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="326dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="23dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/btViewPasswordRe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etPassword"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_view" />
+
+    <ImageButton
+        android:id="@+id/btViewPasswordRe"
+        android:layout_width="44dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="32dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/tvPasswordReq"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etPasswordRe"
+        app:layout_constraintTop_toBottomOf="@+id/btViewPassword"
+        app:srcCompat="@android:drawable/ic_menu_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

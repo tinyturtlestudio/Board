@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="426dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background_gradient" />
+
+    <TextView
+        android:id="@+id/tvProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/roboto"
+        android:text="PROFILE"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDisplayName"
+        android:layout_width="160dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="7dp"
+        android:fontFamily="@font/roboto"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ibProfilePic"
+        android:layout_width="203dp"
+        android:layout_height="158dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="105dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_panorama_gray_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/ic_panorama_gray_24dp" />
+
+    <Button
+        android:id="@+id/btSaveProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginBottom="60dp"
+        android:text="Save Changes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAreaL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="31dp"
+        android:fontFamily="@font/roboto"
+        android:text="Area"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ibProfilePic" />
+
+    <EditText
+        android:id="@+id/tvAbout"
+        android:layout_width="361dp"
+        android:layout_height="136dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/roboto"
+        android:gravity="left"
+        android:hint="Tell people about you!"
+        android:inputType="textMultiLine"
+        android:lines="4"
+        android:maxLength="200"
+        android:maxLines="4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAboutL" />
+
+    <TextView
+        android:id="@+id/tvAboutL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="13dp"
+        android:fontFamily="@font/roboto"
+        android:text="About"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvArea" />
+
+    <EditText
+        android:id="@+id/tvArea"
+        android:layout_width="365dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="11dp"
+        android:fontFamily="@font/roboto"
+        android:hint="Don't put your address! General area is more than enough!"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAreaL" />
+
+    <TextView
+        android:id="@+id/tvRSVPL"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/roboto"
+        android:gravity="center"
+        android:text="RSVPs"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDisplayName" />
+
+    <TextView
+        android:id="@+id/tvEventsL"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/roboto"
+        android:gravity="center"
+        android:text="Events"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/ibProfilePic"
+        app:layout_constraintTop_toBottomOf="@+id/tvDisplayName" />
+
+    <TextView
+        android:id="@+id/tvEventsCount"
+        android:layout_width="60dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="1dp"
+        android:fontFamily="@font/roboto"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/ibProfilePic"
+        app:layout_constraintTop_toBottomOf="@+id/tvEventsL" />
+
+    <TextView
+        android:id="@+id/tvRSVPCount"
+        android:layout_width="60dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/roboto"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRSVPL" />
+
+    <ProgressBar
+        android:id="@+id/postProgressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="324dp"
+        android:layout_marginEnd="156dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ProgressBar>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

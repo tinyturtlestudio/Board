@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditEventActivity">
+
+    <EditText
+        android:id="@+id/etEditEventTime"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:focusable="false"
+        android:fontFamily="@font/roboto"
+        android:inputType="textPersonName"
+        android:hint="@string/etEventTime"
+        app:layout_constraintBottom_toTopOf="@+id/etEditEventAddress"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/etEditEventDate" />
+
+    <EditText
+        android:id="@+id/etEditEventAddress"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:focusable="false"
+        android:fontFamily="@font/roboto"
+        android:inputType="textImeMultiLine"
+        android:hint="@string/etEventAddress"
+        app:layout_constraintBottom_toTopOf="@+id/etEditEventDetails"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/etEditEventTime" />
+
+    <EditText
+        android:id="@+id/etEditEventDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="11dp"
+        android:ems="10"
+        android:focusable="false"
+        android:fontFamily="@font/roboto"
+        android:inputType="textPersonName"
+        android:hint="@string/etEventDate"
+        app:layout_constraintBottom_toTopOf="@+id/etEditEventTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEditEventName" />
+
+    <EditText
+        android:id="@+id/etEditEventDetails"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:gravity="top|left"
+        android:inputType="textMultiLine"
+        android:scrollHorizontally="false"
+        android:singleLine="false"
+        android:maxLength="200"
+        android:lines="4"
+        android:maxLines="4"
+        android:hint="@string/etEventInfo"
+        app:layout_constraintBottom_toTopOf="@+id/ivEditUserPhoto"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/etEditEventAddress" />
+
+    <Button
+        android:id="@+id/btEditChoosePhoto"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="27dp"
+        android:text="Choose Photo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btConfirmEdit"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btConfirmEdit"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="27dp"
+        android:text="Confirm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btEditChoosePhoto"
+        app:layout_constraintTop_toBottomOf="@+id/ivEditUserPhoto" />
+
+    <ImageView
+        android:id="@+id/ivEditUserPhoto"
+        android:layout_width="210dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/btConfirmEdit"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/etEditEventDetails"
+        tools:srcCompat="@tools:sample/backgrounds/scenic[16]" />
+
+    <EditText
+        android:id="@+id/etEditEventName"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:maxLength="35"
+        android:fontFamily="@font/roboto"
+        android:inputType="textPersonName"
+        android:hint="@string/etEventName"
+        app:layout_constraintBottom_toTopOf="@+id/etEditEventDate"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivEditShadow"
+        android:layout_width="420dp"
+        android:layout_height="804dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@color/cardview_shadow_start_color" />
+
+    <ProgressBar
+        android:id="@+id/editProgressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:visibility="gone"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="250dp"
+        app:layout_constraintStart_toStartOf="@+id/ivEditShadow"
+        app:layout_constraintTop_toTopOf="@+id/ivEditShadow"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50121653" />
+</androidx.constraintlayout.widget.ConstraintLayout>

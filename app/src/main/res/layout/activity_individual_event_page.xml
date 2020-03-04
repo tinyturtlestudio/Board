@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IndividualEventPage">
+
+    <TextView
+        android:id="@+id/tvEventTime2"
+        android:layout_width="92dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="24dp"
+        android:fontFamily="@font/roboto"
+        android:gravity="center"
+        android:text="@string/tvRSVPs"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btRSVPs"
+        app:layout_constraintStart_toEndOf="@+id/tvEventPoster" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="447dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="220dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/btEditPost"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background_gradient" />
+
+    <TextView
+        android:id="@+id/tvEventDetails"
+        android:layout_width="325dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="14dp"
+        android:fontFamily="@font/roboto"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btEditPost"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEventTime" />
+
+    <TextView
+        android:id="@+id/tvEventAddress"
+        android:layout_width="325dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="12dp"
+        android:clickable="true"
+        android:fontFamily="@font/roboto"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvEventPoster"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEventDistance" />
+
+    <TextView
+        android:id="@+id/tvEventDate"
+        android:layout_width="109dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="23dp"
+        android:fontFamily="@font/roboto"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvEventTime"
+        app:layout_constraintEnd_toStartOf="@+id/tvEventTime"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvEventName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/roboto"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvEventAddress"
+        app:layout_constraintEnd_toStartOf="@+id/tvEventDistance"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvEventTime"
+        android:layout_width="99dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/roboto"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvEventDetails"
+        app:layout_constraintStart_toEndOf="@+id/tvEventDate"
+        app:layout_constraintTop_toBottomOf="@+id/tvEventPoster" />
+
+    <TextView
+        android:id="@+id/tvEventDistance"
+        android:layout_width="73dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="19dp"
+        android:fontFamily="@font/roboto"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvEventAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvEventName"
+        app:layout_constraintTop_toBottomOf="@+id/ivEventImage" />
+
+    <ImageView
+        android:id="@+id/ivEventImage"
+        android:layout_width="414dp"
+        android:layout_height="191dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvEventDistance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:color/transparent" />
+
+    <Button
+        android:id="@+id/btDeletePost"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:background="@android:drawable/btn_default"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:fontFamily="@font/roboto"
+        android:text="Delete Post"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btEditPost" />
+
+    <Button
+        android:id="@+id/btEditPost"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="90dp"
+        android:fontFamily="@font/roboto"
+        android:text="Edit Post"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/tvEventPoster"
+        android:layout_width="225dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="19dp"
+        android:fontFamily="@font/roboto"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/tvEventTime"
+        app:layout_constraintStart_toStartOf="@+id/tvEventAddress"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <Button
+        android:id="@+id/btRSVPoff"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="40dp"
+        android:background="@android:drawable/btn_star_big_off"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/tvEventName"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btRSVPon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="40dp"
+        android:background="@android:drawable/btn_star_big_on"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/tvEventName"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btRSVPs"
+        android:layout_width="92dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="4dp"
+        android:background="#00000000"
+        android:fontFamily="@font/roboto"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvEventDetails"
+        app:layout_constraintStart_toEndOf="@+id/tvEventPoster" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
